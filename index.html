@@ -76,7 +76,16 @@
       padding-left: 1.2rem;
     }
   </style>
-  
+  <style>
+    .parallax {
+      background-image: url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d'); /* replace with your vibe */
+      height: 400px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
   <style>
     html {
       scroll-behavior: smooth;
@@ -105,27 +114,31 @@
   </style>
   
   <style>
-  .toggle-dark {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background: #eee;
-    color: #111;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    z-index: 999;
-  }
+    .toggle-dark {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: #eee;
+      color: #111;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 999;
+    }
 
-  body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-  }
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
 
-  body.dark-mode a { color: #90caf9; }
+    body.dark-mode a { color: #90caf9; }
   </style>
-  
+  <style>
+    body, button, .project-content, header, nav, .modal-content {
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+  </style>
   <style>
     .project button {
       background: #444;
@@ -166,7 +179,7 @@
     <a href="#contact">Contact</a>
   </nav>
   <main>
-    
+    <div class="parallax"></div>
     <section id="about-me">
       <h1>About Me</h1>
       <p>Hey there! I'm <strong>Krishna (23MS225)</strong>, currently a Master's student at <strong>IISER Kolkata</strong>, with a strong academic background and a deep curiosity for the natural world, technology, and how the two intersect. I’m a passionate learner with a multidisciplinary mindset—keen on exploring the interface between biology and data science, especially through machine learning and computational tools.</p>
