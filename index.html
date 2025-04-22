@@ -158,7 +158,10 @@
       border-left: 4px solid #333;
     }
   </style>
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minimal Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
   
 <body>
@@ -172,12 +175,21 @@
       <p>Undergraduate Student | Academic Portfolio</p>
     </div>
   </header>
-  <nav>
-    <a href="#about-me">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#documents">Documents</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <!-- Hamburger Menu Icon -->
+  <div class="menu-icon" onclick="toggleMenu()">
+    &#9776;
+  </div>
+
+  <!-- Navigation Side Menu -->
+  <div id="side-menu" class="side-menu">
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  
   <main>
     <div class="parallax"></div>
     <section id="about-me">
@@ -246,6 +258,8 @@
   <footer>
     <p>&copy; 2025 Krishna. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
   
   <script>
     function toggleDarkMode() {
