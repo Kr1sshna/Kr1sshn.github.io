@@ -7,7 +7,7 @@ let currentX = 0;
 
 points.forEach((point, index) => {
   point.addEventListener('click', () => {
-    const pointX = point.offsetLeft + point.offsetWidth / 2 - 24;
+    const pointX = point.offsetLeft + point.offsetWidth / 2 - 24; // Center the character at the point
     animateWalk(currentX, pointX, index);
     currentX = pointX;
   });
@@ -20,7 +20,7 @@ function animateWalk(start, end, contentIndex) {
   const direction = distance > 0 ? 1 : -1;
   const step = 5 * direction;
 
-  character.style.backgroundPosition = "url('walk-imported.png') 0 0";
+  character.style.backgroundPosition = `url('walk-imported.png')0px 0px`;
 
   const walk = setInterval(() => {
     if ((direction > 0 && x >= end) || (direction < 0 && x <= end)) {
@@ -29,10 +29,10 @@ function animateWalk(start, end, contentIndex) {
       return;
     }
 
-    frame = (frame + 1) % 4;
+    frame = (frame + 1) % 4; // Animate the sprite by switching frames
     character.style.backgroundPosition = `-${frame * 48}px 0px`;
     x += step;
-    character.style.left = `${x}px`;
+    character.style.left = `${x}px`; // Move the character horizontally
   }, 80);
 }
 
