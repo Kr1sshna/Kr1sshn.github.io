@@ -20,12 +20,12 @@ function animateWalk(start, end, contentIndex) {
   const direction = distance > 0 ? 1 : -1;
   const step = 5 * direction;
 
-  character.style.background = "url('https://i.imgur.com/KpGg2xB.png') 0 0";
+  character.style.background = "url('walk-imported.png') 0 0";
 
   const walk = setInterval(() => {
     if ((direction > 0 && x >= end) || (direction < 0 && x <= end)) {
       clearInterval(walk);
-      character.style.background = "url('https://i.imgur.com/KpGg2xB.png') 0 0";
+      character.style.background = "url('walk-imported.png') 0 0";
       showContent(contentIndex);
       return;
     }
